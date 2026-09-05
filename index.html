@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="A quiet collection of photographs and field notes." />
+    <title>Still / Moving — Photographs</title>
+    <link rel="stylesheet" href="assets/styles.css" />
+    <script src="assets/gallery-data.js" defer></script>
+    <script src="assets/site.js" defer></script>
+  </head>
+  <body>
+    <a class="skip-link" href="#gallery">Skip to photographs</a>
+
+    <header class="site-header">
+      <a class="wordmark" href="index.html" aria-label="Still / Moving, home">
+        <span>Still</span><i aria-hidden="true"></i><span>Moving</span>
+      </a>
+      <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-nav">
+        <span>Menu</span>
+      </button>
+      <nav class="site-nav" id="site-nav" aria-label="Primary navigation">
+        <a class="active" href="index.html" aria-current="page">Photographs</a>
+        <a href="essays.html">Essays</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+    </header>
+
+    <main>
+      <section class="gallery-intro" aria-labelledby="gallery-title">
+        <p class="eyebrow">A visual journal</p>
+        <h1 id="gallery-title">Small moments,<br />held a little longer.</h1>
+        <span class="scroll-note" aria-hidden="true">Scroll to wander <b>↓</b></span>
+      </section>
+
+      <section class="photo-grid" id="gallery" aria-label="Photo collection" data-gallery></section>
+
+      <dialog class="photo-viewer" id="photo-viewer" aria-label="Photograph viewer">
+        <button class="photo-viewer-close" type="button">Close <span aria-hidden="true">×</span></button>
+        <button class="photo-viewer-arrow photo-viewer-previous" type="button" data-photo-previous aria-label="Previous photograph">&lt;</button>
+        <figure class="photo-viewer-slide">
+          <img data-photo-viewer-image alt="" />
+          <figcaption data-photo-viewer-caption aria-live="polite"></figcaption>
+        </figure>
+        <button class="photo-viewer-arrow photo-viewer-next" type="button" data-photo-next aria-label="Next photograph">&gt;</button>
+      </dialog>
+
+      <section class="next-page" aria-label="Continue to essays">
+        <p>Words from different journeys</p>
+        <a href="essays.html">Read the essays <span aria-hidden="true">↗</span></a>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <p>© <span data-year>2026</span> Still / Moving</p>
+      <p>Made slowly.</p>
+    </footer>
+  </body>
+</html>

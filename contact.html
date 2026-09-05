@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="Contact Still / Moving." />
+    <title>Still / Moving — Contact</title>
+    <link rel="stylesheet" href="assets/styles.css" />
+    <script src="assets/site.js" defer></script>
+  </head>
+  <body class="contact-page">
+    <a class="skip-link" href="#contact-form">Skip to contact form</a>
+
+    <header class="site-header">
+      <a class="wordmark" href="index.html" aria-label="Still / Moving, home">
+        <span>Still</span><i aria-hidden="true"></i><span>Moving</span>
+      </a>
+      <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-nav">
+        <span>Menu</span>
+      </button>
+      <nav class="site-nav" id="site-nav" aria-label="Primary navigation">
+        <a href="index.html">Photographs</a>
+        <a href="essays.html">Essays</a>
+        <a class="active" href="contact.html" aria-current="page">Contact</a>
+      </nav>
+    </header>
+
+    <main>
+      <section class="contact-hero" aria-labelledby="contact-title">
+        <p class="eyebrow">Contact</p>
+        <h1 id="contact-title">Say hello<br />with any thoughts.</h1>
+      </section>
+
+      <section class="contact-panel" aria-label="Send a message">
+        <form class="contact-form" id="contact-form" action="https://formsubmit.co/happyjac@gmail.com" method="post">
+          <input type="hidden" name="_subject" value="New message from Still / Moving" />
+          <input type="hidden" name="_template" value="table" />
+          <div class="contact-field">
+            <label for="contact-name">Name</label>
+            <input id="contact-name" name="name" type="text" autocomplete="name" required />
+          </div>
+
+          <div class="contact-field">
+            <label for="contact-email">Email</label>
+            <input id="contact-email" name="email" type="email" autocomplete="email" required />
+          </div>
+
+          <div class="contact-field contact-field-message">
+            <label for="contact-message">Message</label>
+            <textarea id="contact-message" name="message" rows="7" required></textarea>
+          </div>
+
+          <button class="contact-submit" type="submit">Send message <span aria-hidden="true">→</span></button>
+        </form>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <p>© <span data-year>2026</span> Still / Moving</p>
+      <p>Made slowly.</p>
+    </footer>
+  </body>
+</html>

@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="Essays on attention and the spaces between." />
+    <title>Still / Moving — Essays</title>
+    <link rel="stylesheet" href="assets/styles.css" />
+    <script src="assets/site.js" defer></script>
+  </head>
+  <body class="essays-page">
+    <a class="skip-link" href="#essays">Skip to essays</a>
+
+    <header class="site-header">
+      <a class="wordmark" href="index.html" aria-label="Still / Moving, home">
+        <span>Still</span><i aria-hidden="true"></i><span>Moving</span>
+      </a>
+      <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-nav">
+        <span>Menu</span>
+      </button>
+      <nav class="site-nav" id="site-nav" aria-label="Primary navigation">
+        <a href="index.html">Photographs</a>
+        <a class="active" href="essays.html" aria-current="page">Essays</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+    </header>
+
+    <main>
+      <section class="essay-hero">
+        <p class="eyebrow">Notes on place &amp; attention</p>
+        <h1>Field notes<br />from everyday life.</h1>
+      </section>
+
+      <section class="essay-list" id="essays" aria-label="Essay collection">
+        <article class="essay-row">
+          <div class="essay-number">01</div>
+          <div class="essay-meta"><span>8 min read</span></div>
+          <div class="essay-summary">
+            <p class="essay-topic">Grief</p>
+            <h2>Afterlife To-Do List</h2>
+            <p>What happened after Mum died, when I found myself running the world’s saddest project plan.</p>
+          </div>
+          <button class="read-button" type="button" data-essay="afterlife" aria-label="Read Afterlife To-Do List"><span>Read</span><b aria-hidden="true">↗</b></button>
+        </article>
+      </section>
+
+    </main>
+
+    <footer class="site-footer">
+      <p>© <span data-year>2026</span> Still / Moving</p>
+      <p>Made slowly.</p>
+    </footer>
+
+    <dialog class="essay-dialog" id="essay-dialog" aria-labelledby="dialog-title">
+      <button class="dialog-close" type="button" aria-label="Close essay">Close <span aria-hidden="true">×</span></button>
+      <article class="dialog-content">
+        <p class="eyebrow" id="dialog-topic">Essay</p>
+        <h2 id="dialog-title"></h2>
+        <p class="dialog-deck" id="dialog-deck"></p>
+        <div class="dialog-body" id="dialog-body"></div>
+      </article>
+    </dialog>
+  </body>
+</html>
