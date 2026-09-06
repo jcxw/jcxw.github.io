@@ -17,18 +17,21 @@ const gallery = document.querySelector('[data-gallery]');
 const galleryPhotos = window.GALLERY_PHOTOS ?? [];
 const photoViewer = document.querySelector('#photo-viewer');
 const photoViewerImage = document.querySelector('[data-photo-viewer-image]');
-const photoViewerCaption = document.querySelector('[data-photo-viewer-caption]');
+const photoViewerTitle = document.querySelector('[data-photo-viewer-title]');
+const photoViewerSubtitle = document.querySelector('[data-photo-viewer-subtitle]');
 let activePhotoIndex = 0;
 
 const showPhoto = (index) => {
-  if (!photoViewerImage || !photoViewerCaption || !galleryPhotos.length) return;
+  if (!photoViewerImage || !photoViewerTitle || !photoViewerSubtitle || !galleryPhotos.length) return;
   activePhotoIndex = (index + galleryPhotos.length) % galleryPhotos.length;
   const photo = galleryPhotos[activePhotoIndex];
   photoViewerImage.src = photo.src;
   photoViewerImage.width = photo.width;
   photoViewerImage.height = photo.height;
-  photoViewerImage.alt = photo.caption;
-  photoViewerCaption.textContent = photo.caption;
+  photoViewerImage.alt = photo.subtitle ? `${photo.caption}, ${photo.subtitle}` : photo.caption;
+  photoViewerTitle.textContent = photo.caption;
+  photoViewerSubtitle.textContent = photo.subtitle ?? '';
+  photoViewerSubtitle.hidden = !photo.subtitle;
 };
 
 const openPhotoViewer = (selectedIndex) => {
@@ -44,13 +47,13 @@ if (gallery) {
     card.className = 'photo-card';
     card.tabIndex = 0;
     card.role = 'button';
-    card.setAttribute('aria-label', `Open ${photo.caption} in the scrolling gallery`);
+    card.setAttribute('aria-label', `Open ${photo.caption} in the gallery`);
 
     const image = document.createElement('img');
     image.src = photo.src;
     image.width = photo.width;
     image.height = photo.height;
-    image.alt = photo.caption;
+    image.alt = photo.subtitle ? `${photo.caption}, ${photo.subtitle}` : photo.caption;
     image.decoding = 'async';
     if (index === 0) {
       image.fetchPriority = 'high';
@@ -60,8 +63,15 @@ if (gallery) {
 
     const caption = document.createElement('figcaption');
     const captionText = document.createElement('span');
+    captionText.className = 'photo-caption-title';
     captionText.textContent = photo.caption;
     caption.append(captionText);
+    if (photo.subtitle) {
+      const subtitle = document.createElement('small');
+      subtitle.className = 'photo-caption-subtitle';
+      subtitle.textContent = photo.subtitle;
+      caption.append(subtitle);
+    }
     card.append(image, caption);
     card.addEventListener('click', () => openPhotoViewer(index));
     card.addEventListener('keydown', (event) => {

@@ -14,7 +14,9 @@ A photography and essay portfolio with an automatically generated photo gallery.
 2. Rename the files into the order you want. The gallery sorts them alphabetically.
 3. Push the changes to GitHub. The site rebuilds and rearranges the gallery automatically.
 
-The rollover caption is always the filename before its extension. For example, `Quiet Morning.jpg` appears as `Quiet Morning`. Keep `assets/photos/web` untouched; it is generated automatically.
+On a Mac, double-click `Update Website.command` to rebuild the gallery and upload all changes. The first run prepares its image tools; later runs are faster.
+
+For a main caption and smaller image title, name a photograph like `2026-06-13_SG_02-East Coast Park.JPG`. It appears with `East Coast Park` as the main caption and `2026-06-13_SG_02` beneath it. Filenames without that pattern appear as one main caption. Keep `assets/photos/web` untouched; it is generated automatically.
 
 For a local preview after changing photographs, run:
 

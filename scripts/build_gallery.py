@@ -18,6 +18,9 @@ WEB_DIR = PHOTO_DIR / "web"
 MANIFEST = ROOT / "assets" / "gallery-data.js"
 SUPPORTED_EXTENSIONS = {".jpg", ".jpeg", ".png", ".webp"}
 MAX_WIDTH = 2400
+CAPTION_PATTERN = re.compile(
+    r"^(?P<subtitle>\d{4}-\d{2}-\d{2}_[A-Za-z]{2,3}_\d+)-(?P<caption>.+)$"
+)
 
 
 def output_name(source: Path, used_names: set[str]) -> str:
@@ -29,6 +32,13 @@ def output_name(source: Path, used_names: set[str]) -> str:
         suffix += 1
     used_names.add(candidate.casefold())
     return candidate
+
+
+def caption_parts(source: Path) -> tuple[str, str]:
+    match = CAPTION_PATTERN.match(source.stem)
+    if not match:
+        return source.stem, ""
+    return match.group("caption").strip(), match.group("subtitle").strip()
 
 
 def build_gallery() -> list[dict[str, object]]:
@@ -52,6 +62,7 @@ def build_gallery() -> list[dict[str, object]]:
     for source in sources:
         destination_name = output_name(source, used_names)
         destination = WEB_DIR / destination_name
+        caption, subtitle = caption_parts(source)
 
         with Image.open(source) as opened:
             image = ImageOps.exif_transpose(opened)
@@ -75,7 +86,8 @@ def build_gallery() -> list[dict[str, object]]:
                 "src": f"assets/photos/web/{destination_name}",
                 "width": width,
                 "height": height,
-                "caption": source.stem,
+                "caption": caption,
+                "subtitle": subtitle,
             }
         )
 
