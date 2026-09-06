@@ -296,6 +296,16 @@ img { display: block; width: 100%; }
 .next-page p { margin: 0; font-family: var(--mono); font-size: 0.7rem; letter-spacing: 0.1em; text-transform: uppercase; }
 .next-page a { text-decoration: none; font-family: var(--serif); font-size: clamp(2.2rem, 5vw, 5.5rem); letter-spacing: -0.04em; }
 .next-page a span { display: inline-block; color: var(--accent); transition: transform 250ms ease; }
+.next-page a span svg {
+  display: block;
+  width: 0.8em;
+  height: 0.8em;
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 1.35;
+  stroke-linecap: square;
+  stroke-linejoin: miter;
+}
 .next-page a:hover span { transform: translate(6px, -6px); }
 
 .site-footer {
@@ -382,6 +392,15 @@ img { display: block; width: 100%; }
   font-size: 1rem;
   font-weight: 400;
   transition: background 220ms ease, color 220ms ease, transform 220ms ease;
+}
+.read-button b svg {
+  width: 1.05rem;
+  height: 1.05rem;
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 1.5;
+  stroke-linecap: square;
+  stroke-linejoin: miter;
 }
 .read-button:hover b { background: var(--ink); color: var(--paper); transform: rotate(45deg); }
 
