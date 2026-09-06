@@ -19,7 +19,7 @@ MANIFEST = ROOT / "assets" / "gallery-data.js"
 SUPPORTED_EXTENSIONS = {".jpg", ".jpeg", ".png", ".webp"}
 MAX_WIDTH = 2400
 CAPTION_PATTERN = re.compile(
-    r"^(?P<subtitle>\d{4}-\d{2}-\d{2}_[A-Za-z]{2,3}_\d+)-(?P<caption>.+)$"
+    r"^(?P<subtitle>\d{4}-\d{2}-\d{2}_[^_]+_\d+)-(?P<caption>.+)$"
 )
 
 

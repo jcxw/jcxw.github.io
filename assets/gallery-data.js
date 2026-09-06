@@ -3,29 +3,29 @@ window.GALLERY_PHOTOS = [
     "src": "assets/photos/web/2024-04-16_CRUISE_020-Strait-of-Malacca.jpg",
     "width": 2400,
     "height": 1600,
-    "caption": "2024-04-16_CRUISE_020-Strait of Malacca",
-    "subtitle": ""
+    "caption": "Strait of Malacca",
+    "subtitle": "2024-04-16_CRUISE_020"
   },
   {
     "src": "assets/photos/web/2024-04-16_CRUISE_021-Strait-of-Malacca.jpg",
     "width": 2400,
     "height": 1600,
-    "caption": "2024-04-16_CRUISE_021-Strait of Malacca",
-    "subtitle": ""
+    "caption": "Strait of Malacca",
+    "subtitle": "2024-04-16_CRUISE_021"
   },
   {
     "src": "assets/photos/web/2024-04-16_CRUISE_023-Strait-of-Malacca.jpg",
     "width": 2400,
     "height": 1600,
-    "caption": "2024-04-16_CRUISE_023-Strait of Malacca",
-    "subtitle": ""
+    "caption": "Strait of Malacca",
+    "subtitle": "2024-04-16_CRUISE_023"
   },
   {
     "src": "assets/photos/web/2024-04-16_CRUISE_024-Strait-of-Malacca.jpg",
     "width": 2400,
     "height": 1600,
-    "caption": "2024-04-16_CRUISE_024-Strait of Malacca",
-    "subtitle": ""
+    "caption": "Strait of Malacca",
+    "subtitle": "2024-04-16_CRUISE_024"
   },
   {
     "src": "assets/photos/web/2024-05-01_CA_032-Squamish.jpg",
@@ -166,6 +166,48 @@ window.GALLERY_PHOTOS = [
     "height": 692,
     "caption": "Botanic Gardens",
     "subtitle": "2026-08-03_SG_01"
+  },
+  {
+    "src": "assets/photos/web/2026-08-19_AU_03-Little-Bay.jpg",
+    "width": 2268,
+    "height": 4032,
+    "caption": "Little Bay",
+    "subtitle": "2026-08-19_AU_03"
+  },
+  {
+    "src": "assets/photos/web/2026-08-19_AU_07-Coogee-Beach.jpg",
+    "width": 2400,
+    "height": 1600,
+    "caption": "Coogee Beach",
+    "subtitle": "2026-08-19_AU_07"
+  },
+  {
+    "src": "assets/photos/web/2026-08-19_AU_08-Coogee-Beach.jpg",
+    "width": 2400,
+    "height": 1600,
+    "caption": "Coogee Beach",
+    "subtitle": "2026-08-19_AU_08"
+  },
+  {
+    "src": "assets/photos/web/2026-08-19_AU_09-Coogee-Beach.jpg",
+    "width": 2400,
+    "height": 1600,
+    "caption": "Coogee Beach",
+    "subtitle": "2026-08-19_AU_09"
+  },
+  {
+    "src": "assets/photos/web/2026-08-21_AU_07-Coogee-Beach.jpg",
+    "width": 2400,
+    "height": 4267,
+    "caption": "Coogee Beach",
+    "subtitle": "2026-08-21_AU_07"
+  },
+  {
+    "src": "assets/photos/web/2026-08-21_AU_08-Coogee-Beach.jpg",
+    "width": 2400,
+    "height": 4267,
+    "caption": "Coogee Beach",
+    "subtitle": "2026-08-21_AU_08"
   },
   {
     "src": "assets/photos/web/2026-09-06_SG_01-Maju-Forest.jpg",
