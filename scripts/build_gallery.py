@@ -41,6 +41,11 @@ def caption_parts(source: Path) -> tuple[str, str]:
     return match.group("caption").strip(), match.group("subtitle").strip()
 
 
+def photo_date(source: Path) -> str:
+    match = re.match(r"^(\d{4}-\d{2}-\d{2})_", source.stem)
+    return match.group(1) if match else ""
+
+
 def build_gallery() -> list[dict[str, object]]:
     sources = sorted(
         (
@@ -50,6 +55,7 @@ def build_gallery() -> list[dict[str, object]]:
         ),
         key=lambda path: path.name.casefold(),
     )
+    sources.sort(key=photo_date, reverse=True)
 
     WEB_DIR.mkdir(parents=True, exist_ok=True)
     for generated in WEB_DIR.iterdir():

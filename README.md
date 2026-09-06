@@ -11,7 +11,7 @@ A photography and essay portfolio with an automatically generated photo gallery.
 ## Add or rearrange photographs
 
 1. Put JPG, JPEG, PNG, or WebP originals directly in `assets/photos`.
-2. Rename the files into the order you want. The gallery sorts them alphabetically.
+2. Begin dated filenames with `YYYY-MM-DD`. The gallery shows the newest dates first and keeps photographs from the same day in filename order.
 3. Push the changes to GitHub. The site rebuilds and rearranges the gallery automatically.
 
 On a Mac, double-click `Update Website.command` to rebuild the gallery and upload all changes. The first run prepares its image tools; later runs are faster.
